@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<img id="PRS" src="https://www.prsnetwork.com/wp-content/uploads/2018/07/New-PRSnetwork-Logo-Art-Master4.png" alt="prsnetwork.com" title="founded in 1989">
+
+
+	<title>KPI immediate</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <!-- link kpistyle.css -->
+      <link rel="stylesheet" type="text/css" href="kpistyle.css">
+
+</head>
+<body>
+	<p></p>
+	<div class="grid-container col-xsm-12">
+		<form KPI oninput="c.value=a.value/(b.value/((e.valueAsNumber-d.valueAsNumber)/ (60*60*24*1000)).toFixed(2))">
+				<div class="grid-item">
+					KPI #1 - Days in AR (totalAR/totalCharges) = <output id="c" name="c" for="a b e d">0</output>
+					Total AR <input type="number" id="a" value="1">
+					Total charges <input type="number" id="b" value="1">
+					Start date <input type="Date" id="d" value="2018-01-01">
+					End date <input type="Date" id="e" value="2018-12-31"> 
+				</div>
+		</form>
+				<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
+					<div class="grid-item">
+						KPI #2 - Average $ per RVU is $
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total Payments <input type="number" id="a" value="1">
+						/ Total Total RVUs <input type="number" id="b" value="1">
+					</div>
+				</form>
+		
+			<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
+					<div class="grid-item">
+						KPI #3 - Average Charge per Visit is $
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total Charges <input type="number" id="a" value="1">
+						/ Total Visits <input type="number" id="b" value="1">
+					</div>
+			</form>
+
+			<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
+					<div class="grid-item">
+						KPI #4 - Average Receipt per Visit is $
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total Payments <input type="number" id="a" value="1">
+						/ Total Visits <input type="number" id="b" value="1">
+					</div>
+			</form>
+
+			<form KPI oninput="c.value=parseInt((a.value/((e.valueAsNumber-d.valueAsNumber)/ (60*60*24*1000)/30.3)))">
+					<div class="grid-item">
+						KPI #5 - Average monthly charges = <output id="c" name="c" for="a e d">0</output>
+						Total charges <input type="number" id="a" value="1">
+						/ Start date <input type="Date" id="d" value="2018-01-01">
+						End date <input type="Date" id="e" value="2018-12-31"> 
+					</div>
+			</form>
+
+			<form KPI oninput="c.value=((parseInt(a.value)/(parseInt(a.value)+parseInt(b.value))).toFixed(2))">
+					<div class="grid-item">
+						KPI #6 - Net collection rate
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total Payments <input type="number" id="a" value="1">
+						+ Collectible write-offs <input type="number" id="b" value="1">
+					</div>
+			</form>
+
+			<form KPI oninput="c.value=parseInt(a.value)/parseInt(b.value).toFixed(2)">
+					<div class="grid-item">
+						KPI #7 - Denial rate is 
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total # of claims denied on first pass<input type="number" id="a" value="1">
+						/Total visits <input type="number" id="b" value="1">
+					</div>
+			</form>
+
+			<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
+					<div class="grid-item">
+						KPI #8 - % of AR over 120 days is 
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total AR over 120 days on last day <input type="number" id="a" value="1">
+						/Total AR on last day <input type="number" id="b" value="1">
+					</div>
+			</form>
+
+			<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
+					<div class="grid-item">
+						KPI #9 - Average RVU per visit is  
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total RVU <input type="number" id="a" value="1">
+						/Total Visits <input type="number" id="b" value="1">
+					</div>
+			</form>
+
+			<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
+					<div class="grid-item">
+						KPI #10 - % of Patient AR is   
+						<output id="c" name="c" for="a b">0</output> which = 
+						Total Patient AR <input type="number" id="a" value="1">
+						/Total AR <input type="number" id="b" value="1">
+					</div>
+			</form>
+		</div>	
+</body>
+</html>
