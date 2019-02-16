@@ -2,18 +2,29 @@
 <html>
 <head>
 
-	<a href="https://www.prsnetwork.com"><img id="PRS" src="https://www.prsnetwork.com/wp-content/uploads/2018/07/New-PRSnetwork-Logo-Art-Master4.png" alt="prsnetwork.com" title="founded in 1989"></a>
+		<a href="https://www.prsnetwork.com"><img id="PRS" src="https://www.prsnetwork.com/wp-content/uploads/2018/07/New-PRSnetwork-Logo-Art-Master4.png" alt="prsnetwork.com" title="founded in 1989"></a>
+
 
 	<title>KPI Calculator</title>
-       	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <!-- link kpistyle.css -->
       <link rel="stylesheet" type="text/css" href="kpistyle.css">
+
 </head>
+	<div id="h1">
+		<h1>PRS KPI Calculator</h1>
+	</div>
+	
 <body>
 	<p></p>
 	<div class="grid-container col-xsm-12">
 		<form KPI oninput="c.value=a.value/(b.value/((e.valueAsNumber-d.valueAsNumber)/ (60*60*24*1000)).toFixed(2))">
 				<div class="grid-item">
-					KPI #1 - Days in AR (totalAR/totalCharges) is <output id="c" name="c" for="a b e d">0</output> which = Total AR <input type="number" id="a" value="1"> Total charges <input type="number" id="b" value="1"> Start date <input type="Date" id="d" value="2018-01-01"> End date <input type="Date" id="e" value="2018-12-31"> 
+					KPI #1 - Days in AR (totalAR/totalCharges) = <output id="c" name="c" for="a b e d">0</output>
+					Total AR <input type="number" id="a" value="1">
+					Total charges <input type="number" id="b" value="1">
+					Start date <input type="Date" id="d" value="2018-01-01">
+					End date <input type="Date" id="e" value="2018-12-31"> 
 				</div>
 		</form>
 				<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
@@ -45,8 +56,8 @@
 
 			<form KPI oninput="c.value=parseInt((a.value/((e.valueAsNumber-d.valueAsNumber)/ (60*60*24*1000)/30.3)))">
 					<div class="grid-item">
-						KPI #5 - Average monthly charges is <output id="c" name="c" for="a e d">0</output>
-						which = Total charges <input type="number" id="a" value="1">
+						KPI #5 - Average monthly charges = <output id="c" name="c" for="a e d">0</output>
+						Total charges <input type="number" id="a" value="1">
 						/ Start date <input type="Date" id="d" value="2018-01-01">
 						End date <input type="Date" id="e" value="2018-12-31"> 
 					</div>
@@ -54,7 +65,7 @@
 
 			<form KPI oninput="c.value=((parseInt(a.value)/(parseInt(a.value)+parseInt(b.value))).toFixed(2))">
 					<div class="grid-item">
-						KPI #6 - Net collection rate is $
+						KPI #6 - Net collection rate
 						<output id="c" name="c" for="a b">0</output> which = 
 						Total Payments <input type="number" id="a" value="1">
 						+ Collectible write-offs <input type="number" id="b" value="1">
