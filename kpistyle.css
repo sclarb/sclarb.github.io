@@ -49,6 +49,11 @@
         font-weight: bold; 
         text-decoration: underline;
       }
+      #h1{
+        text-align: center;
+        text-shadow: 2px 2px #FF0000;
+      }
+
 
       
     
