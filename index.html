@@ -15,11 +15,7 @@
 	<div class="grid-container col-xsm-12">
 		<form KPI oninput="c.value=a.value/(b.value/((e.valueAsNumber-d.valueAsNumber)/ (60*60*24*1000)).toFixed(2))">
 				<div class="grid-item">
-					KPI #1 - Days in AR (totalAR/totalCharges) is <output id="c" name="c" for="a b e d">0</output>
-					which = Total AR <input type="number" id="a" value="1">
-					Total charges <input type="number" id="b" value="1">
-					Start date <input type="Date" id="d" value="2018-01-01">
-					End date <input type="Date" id="e" value="2018-12-31"> 
+					KPI #1 - Days in AR (totalAR/totalCharges) is <output id="c" name="c" for="a b e d">0</output> which = Total AR <input type="number" id="a" value="1"> Total charges <input type="number" id="b" value="1"> Start date <input type="Date" id="d" value="2018-01-01"> End date <input type="Date" id="e" value="2018-12-31"> 
 				</div>
 		</form>
 				<form KPI oninput="c.value=(parseInt(a.value)/parseInt(b.value)).toFixed(2)">
